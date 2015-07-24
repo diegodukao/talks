@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ionic: Elevando o nível do seu aplicativo multiplataforma</title>
+
+    <meta name="description" content="Ionic: Elevando o nível do seu aplicativo multiplataforma">
+    <meta name="author" content="Diego Dukão">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../css/reveal.min.css">
+    <link rel="stylesheet" href="../css/theme/simple.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+    	if( window.location.search.match( /print-pdf/gi ) ) {
+    		var link = document.createElement( 'link' );
+    		link.rel = 'stylesheet';
+    		link.type = 'text/css';
+    		link.href = '../css/print/pdf.css';
+    		document.getElementsByTagName( 'head' )[0].appendChild( link );
+    	}
+    </script>
+    <style type="text/css">
+      .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+        text-transform: none !important;
+      }
+      .reveal section img {
+        border: none !important;
+        box-shadow: none !important;
+      }
+      .reveal .progress span {
+        background: #FF0000 !important;
+      }
+
+      .without_ul_style > ul {
+        list-style-type: none;
+      }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="../lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+      <!-- Any section element inside of this container is displayed as a slide -->
+
+        <section>
+          <h1>TDC 2015</h1>
+          <h3>Ionic: Elevando o nível do seu aplicativo multiplataforma</h3>
+          <br>
+
+          <h3><b>Diego (Dukão) Moreira Guimarães</b></h3>
+          <br>
+
+          <h4>São Paulo/SP</h4>
+          <h4>24 de Julho de 2015</h4>
+        </section>
+
+        <section>
+		  <h2>Olar</h2>
+          <h3>
+            <p><a target="_blank" href="https://twitter.com/diegodukao">twitter.com/diegodukao</a></p>
+            <p><a target="_blank" href="https://github.com/diegodukao">github.com/diegodukao</a></p>
+            <p><a target="_blank" href="http://garimpo.fm/">garimpo.fm</a></p>
+            <p><a target="_blank" href="mailto:diegodukao@gmail.com">diegodukao@gmail.com</a></p>
+			<!-- Colocar imagem parafernalia -->
+            <p><a target="_blank" href="http://www.parafernalia.net.br">Parafernalia Interativa</a></p>
+          </h3>
+        </section>
+
+        <section>
+          <h2>
+            <p>
+              <a target="_blank" href="https://diegodukao.github.io/talks/">diegodukao.github.io/talks/</a>
+            </p>
+          </h2>
+          <br>
+        </section>
+
+		<section class="fragments" data-markdown>
+			# ?
+
+			- ## Quem já programa pra celular?
+			- ## Nativo?
+			- ## Multiplaforma?
+			- ## PhoneGap?
+		</section>
+
+		<section class="fragments" data-markdown>
+			## Aplicativo multiplataforma presta?
+		</section>
+
+		<section data-markdown>## Tenho algumas ideias de aplicativos para celular.</section>
+		<section data-markdown>## Eu não quero Java.</section>
+
+		<section data-markdown>## Alternativas (que eu já testei)</section>
+
+        <section class="fragments" data-markdown>
+          # Titanium
+
+          - ## JavaScript
+          - ## Compila pra código nativo
+          - ## Mantém o ~look and feel~ de cada plataforma
+        </section>
+
+        <section class="fragments">
+			<h2>Titanium</h2>
+			<ul>
+				<li>Você fica dependente da Appcelerator</li>
+				<li><span style="color:red">Fica sempre atrás das novidades da SDK nativa</span></li>
+			</ul>
+        </section>
+
+		<section><img src="images/alertachuva.png"></section>
+
+		<section class="fragments" data-markdown>
+			# Kivy
+
+			- ## Python + OpenGL
+			- ## Mesma aparência em todas as plataformas
+			- ## Bom para apps muitos específicos
+		</section>
+
+		<section>
+			<h2>Outras Alternativas</h2>
+			<ul>
+				<li>SL4A</li>
+				<li>Corona</li>
+			</ul>
+		</section>
+
+		<section data-markdown>
+			## Ionic / PhoneGap (Cordova)
+
+			- ## Entre nativo e webaapp
+		</section>
+
+		<section data-markdown>
+			## Web App?
+
+			- ### Uma página web otimizada para tablet e celulares
+		</section>
+
+		<section class="fragments" data-markdown>
+			## Vantagens (Web App)
+
+			- ### Você não precisa aprender a programar para aquele SO específico
+			- ### HTML + CSS + Javascript
+			- ### Pode ser apenas uma versão mobile do seu site que já está no ar
+		</section>
+
+		<section class="fragments" data-markdown>
+			## Desvantagens (Web App)
+
+			- ### Acesso limitado aos recursos do dispositivo
+			- ### Mais lenta que apps nativas
+		</section>
+
+		<section class="fragments" data-markdown>
+			## Desvantagem: acesso limitado aos recursos do dispositivo
+
+			- ### O que você não consegue acessar?
+			- #### Câmera, acelerômetro, contatos, etc.
+		</section>
+
+		<section class="fragments" data-markdown>
+			## O você consegue acessar com uma web view?
+
+			- ### Orientação, geolocalização, mídia, etc.
+		</section>
+
+		<section>
+			<h2>Desvantagem: acesso limitado aos recursos do dispositivo</h2>
+			<br>
+			<h3>O que você não consegue acessar?</h3>
+			<ul><li>Câmera, acelerômetro, contatos, etc.</li></ul>
+			<br><br>
+			<h3><span style="color:blue;">Quantos aplicativos você conhece que usa esses recursos?</span></h3>
+		</section>
+
+		<section class="fragments">
+			<h1>75,23%</h1>
+			<ul>
+				<li><span style="font-size:0.8em">Das estatísticas são inventadas</span></li>
+			</ul>
+		</section>
+
+		<section><h2><i>"Ah, mas o meu app precisa disso tudo"</i></h2></section>
+
+		<section><h1>¯\_(ツ)_/¯</h1></section>
+
+		<section class="fragments">
+			<h2>Ionic!</h2>
+			<ul>
+				<li>Web View + APIs para acesso aos recursos do celular</li>
+				<li>HTML5, CSS e JavaScript (AngularJS)</li>
+				<li><span style="color:blue">Você vai estar na moda ;)</span></li>
+			</ul>
+			<br>
+		</section>
+
+		<section><img src="images/fisl15.png"></section>
+
+		<section>
+			<h3>PhoneGap é ~freestyle~ demais!</h3>
+			<img src="images/fistaile.jpg">
+		</section>
+
+		<section>
+			<h3>A falta de um framework JavaScript...</h3>
+			<img src="images/github-opeenar.png">
+		</section>
+
+		<section>
+			<h3>... para organizar.</h3>
+			<img src="images/github2.png">
+		</section>
+
+		<section><img src="images/fistaile.jpg"></section>
+
+		<section><h3>#comofaz #ionic</h3></section>
+
+		<section data-markdown>
+			## Começando com Ionic
+
+			```shell
+				$ npm install -g cordova ionic
+				$ ionic start myApp tabs
+			```
+		</section>
+
+		<section><img src="images/myApp-tree.png"></img></section>
+
+		<section data-markdown>
+			```shell
+				$ ionic platform add android
+				$ ionic build android
+				$ ionic emulate android
+				$ ionic run android
+			```
+		</section>
+
+		<section>imagem do app no emulador</section>
+
+		<section>
+			<h2>Muitos componentes de interface prontos</h2>
+			<img src="images/docs-css.png" id="docs-css"></img>
+		</section>
+
+		<section><h2>A interface toda pode ser customizada com Sass</h2></section>
+
+		<section><h1>Plugins:</h1></section>
+
+		<section>
+			<h1>ngCordova</h1>
+			<h4>Plugins do Cordova e do PhoneGap prontos para serem usados com AngularJS</h4>
+		</section>
+
+		<section>
+			<img src="images/docs-ngCordova.png"></img>
+		</section>
+
+		<section data-markdown>
+			## ngCordova
+			```shell
+				$ cordova plugin add https://github.com/cordova-sms/cordova-sms-plugin.git
+			```
+		</section>
+
+		<section data-markdown>
+			```javascript
+			module.controller('ThisCtrl', function($cordovaSms) {
+
+			  document.addEventListener("deviceready", function () {
+
+			    $cordovaSms
+			      .send('phonenumber', 'SMS content', options)
+			      .then(function() {
+				    // Rolou! SMS enviado
+				  }, function(error) {
+				    // Não rolou.
+			      });
+
+			  });
+			});
+			```
+		</section>
+
+		<section data-markdown>
+			## Push Notifications
+			```shell
+				$ cordova plugin add https://github.com/phonegap-build/PushPlugin.git
+			```
+		</section>
+
+		<section>
+			<h2><a href="http://learn.ionicframework.com/">learn.ionicframework.com</a></h2>
+			<img src="images/learn-ionic.png">
+		</section>
+
+		<section>
+			<h1>Quem usa?</h1>
+			<h2><a href="http://showcase.ionicframework.com/">showcase.ionicframework.com</a></h2>
+		</section>
+
+		<section><img src="images/apps-sworkit.png"></img></section>
+
+		<section><img src="images/apps-mallzee.png"></img></section>
+
+		<section><img src="images/apps-chefsteps.png"></img></section>
+
+		<section><img src="images/apps-priceninja1.png"></img></section>
+
+		<section class="fragments">
+			<h3>Então devo mesmo usar Ionic?</h3>
+			<ul>
+				<li>Você tem tempo e dinheiro limitados?</li>
+				<li>Pretende atingir mais de uma plataforma com o seu aplicativo?</li>
+				<li>Performance não é o mais importante?</li>
+				<li>Já programa para web?</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Então devo mesmo usar Ionic?</h3>
+			<ul>
+				<li>Você tem tempo e dinheiro limitados? <span style="color:red">Sim</span></li>
+				<li>Pretende atingir mais de uma plataforma com o seu aplicativo? <span style="color:red">Sim</span></li>
+				<li>Performance não é o mais importante? <span style="color:red">Sim</span></li>
+				<li>Já programa para web? <span style="color:red">Sim</span></li>
+			</ul>
+			<br><br>
+			<h2><span style="color:red">Sim!</span></h2>
+		</section>
+
+		<section class="fragments">
+			<h3>Já programa para web? <span style="color:red">Não? =/</span></h3>
+			<ul>
+				<li>Já sabe nativo?</li>
+				<li><span style="color:blue">Se não souber, vale apena começar com Ionic! Vai ser mais rápido!</span></li>
+				<li><span style="color:green">Se o app não der certo, você pode virar Front-end Developer ;)</span></li>
+			</ul>
+		</section>
+
+		<section class="fragments">
+			<h1>65,32%</h1>
+			<ul>
+				<li><span style="font-size:0.8em">Das pessoas só acreditam em estatísticas com duas casas decimais.</span></li>
+			</ul>
+		</section>
+
+        <section>
+          <h2>Obrigado!</h2>
+          <h3>
+            <p><a target="_blank" href="https://twitter.com/diegodukao">twitter.com/diegodukao</a></p>
+            <p><a target="_blank" href="https://github.com/diegodukao">github.com/diegodukao</a></p>
+            <p><a target="_blank" href="http://garimpo.fm/">garimpo.fm</a></p>
+            <p><a target="_blank" href="mailto:diegodukao@gmail.com">diegodukao@gmail.com</a></p>
+			<!-- Colocar imagem parafernalia -->
+            <p><a target="_blank" href="http://www.parafernalia.net.br">Parafernalia Interativa</a></p>
+          </h3>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        // transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        transition: 'zoom',
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+        { src: 'lib/js/classList.js',
+          condition: function() { return !document.body.classList; } },
+        { src: '../plugin/markdown/marked.js',
+          condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '../plugin/markdown/markdown.js',
+          condition: function() { return !!document.querySelector( '[data-markdown]' ); },
+          callback: function() {
+            Array.prototype.forEach.call(
+            document.querySelectorAll('section.fragments > ul > li'),
+              function(ele){ ele.className = 'fragment roll-in'; });
+            } },
+        { src: '../plugin/highlight/highlight.js', async: true,
+          callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: '../plugin/zoom-js/zoom.js', async: true,
+          condition: function() { return !!document.body.classList; } },
+        { src: '../plugin/notes/notes.js', async: true,
+          condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+  </body>
+</html>
